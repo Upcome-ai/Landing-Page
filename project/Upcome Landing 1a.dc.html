@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#08080A;font-family:'Space Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:#F5922E;text-decoration:none}
+a:hover{color:#F7A552}
+@keyframes upblink{0%,55%{opacity:1}56%,100%{opacity:.22}}
+@keyframes upmarquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes upfeed{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+</style>
+</helmet>
+
+<div style="background:#08080A;overflow:hidden;color:#ECECEA">
+  <!-- nav -->
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:20px 40px;border-bottom:1px solid #17171A">
+    <div style="display:flex;align-items:center;gap:9px">
+      <img src="assets/upcome-mark.svg" alt="Upcome" style="height:26px;width:26px;display:block">
+      <span style="font-weight:600;font-size:20px;letter-spacing:-.02em">Upcome</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:32px;font-size:14.5px;color:#9A9AA0">
+      <a href="https://mvp.upcome.ai" style="background:#F5922E;color:#0A0A0A;padding:11px 18px;border-radius:8px;font-weight:600">Try the terminal</a>
+    </div>
+  </div>
+
+  <!-- hero split -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:60px 40px 56px;align-items:center">
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#F5922E;border:1px solid #33261A;background:#140F09;padding:7px 12px;border-radius:999px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#F5922E;animation:upblink 1.3s infinite"></span> Live · real-time news terminal
+      </div>
+      <h1 style="font-size:56px;line-height:1.02;letter-spacing:-.03em;font-weight:700;margin:22px 0 0">The moment it happens. Not a moment later.</h1>
+      <p style="font-size:19px;line-height:1.5;color:#A6A6AC;margin:22px 0 0;max-width:30ch">Upcome watches trusted sources in real time and pushes the updates that matter to you the instant they publish.</p>
+      <div style="display:flex;gap:14px;margin-top:34px">
+        <a href="https://mvp.upcome.ai" style="background:#F5922E;color:#0A0A0A;padding:15px 26px;border-radius:9px;font-weight:600;font-size:16px">Try the terminal →</a>
+        <a href="#how" style="border:1px solid #33333A;color:#ECECEA;padding:15px 26px;border-radius:9px;font-weight:500;font-size:16px">How it works</a>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#6E6E76;margin-top:18px;letter-spacing:.03em">Free while in beta · no card required</div>
+    </div>
+
+    <!-- terminal panel -->
+    <div style="background:#0C0C0F;border:1px solid #232328;border-radius:14px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.8)">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 15px;border-bottom:1px solid #1C1C21;background:#0F0F12">
+        <div style="display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8A8A90"><span style="width:7px;height:7px;border-radius:50%;background:#F5922E;animation:upblink 1.3s infinite"></span>LIVE FEED</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5C5C63">MY TOPICS · 6 SOURCES</div>
+      </div>
+      <!-- ticker -->
+      <div style="overflow:hidden;border-bottom:1px solid #1C1C21;background:#0A0A0C">
+        <div style="display:flex;gap:26px;white-space:nowrap;padding:9px 0;width:max-content;animation:upmarquee 26s linear infinite;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9A9AA0">
+          <span>FED ▲ policy review</span><span style="color:#F5922E">WIRE ● chip fab halt</span><span>PORTS ▼ strike</span><span>8-K ● CEO change</span><span style="color:#F5922E">GRID ● outage</span><span>CB ▲ rate signal</span>
+          <span>FED ▲ policy review</span><span style="color:#F5922E">WIRE ● chip fab halt</span><span>PORTS ▼ strike</span><span>8-K ● CEO change</span><span style="color:#F5922E">GRID ● outage</span><span>CB ▲ rate signal</span>
+        </div>
+      </div>
+      <!-- scrolling feed (terminal card style) -->
+      <div style="height:352px;overflow:hidden;position:relative;background:#08080A">
+        <div style="animation:upfeed 30s linear infinite;padding:14px;display:flex;flex-direction:column;gap:10px">
+          <div style="padding:15px 18px;border:1px solid #17171A;border-left:3px solid #F5922E;border-radius:12px;background:#0B0B0E">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;color:#0A0A0A;background:#F5922E;padding:3px 8px;border-radius:5px">BREAKING</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6E6E76">12s</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9A9AA0">Fed newsroom</span><span style="margin-left:auto;font-size:11px;color:#C9946A;background:#140F09;border:1px solid #2A1E12;padding:3px 10px;border-radius:999px">Central Banks</span></div>
+            <div style="font-size:16px;line-height:1.32;font-weight:600;color:#EDEDEC;letter-spacing:-.01em">Federal Reserve announces emergency policy review</div>
+          </div>
+          <div style="padding:15px 18px;border:1px solid #17171A;border-left:3px solid #F5922E;border-radius:12px;background:#0B0B0E">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;color:#0A0A0A;background:#F5922E;padding:3px 8px;border-radius:5px">BREAKING</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6E6E76">58s</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9A9AA0">Global wire</span><span style="margin-left:auto;font-size:11px;color:#C9946A;background:#140F09;border:1px solid #2A1E12;padding:3px 10px;border-radius:999px">Technology</span></div>
+            <div style="font-size:16px;line-height:1.32;font-weight:600;color:#EDEDEC;letter-spacing:-.01em">Major chipmaker halts production at flagship fab</div>
+          </div>
+          <div style="padding:15px 18px;border:1px solid #17171A;border-left:3px solid transparent;border-radius:12px;background:#0B0B0E">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6E6E76">6m</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9A9AA0">Company filing</span><span style="margin-left:auto;font-size:11px;color:#C9946A;background:#140F09;border:1px solid #2A1E12;padding:3px 10px;border-radius:999px">Technology</span></div>
+            <div style="font-size:16px;line-height:1.32;font-weight:600;color:#EDEDEC;letter-spacing:-.01em">8-K filed: CEO transition at $40B logistics firm</div>
+          </div>
+          <div style="padding:15px 18px;border:1px solid #17171A;border-left:3px solid transparent;border-radius:12px;background:#0B0B0E">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6E6E76">4m</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9A9AA0">Local desk</span><span style="margin-left:auto;font-size:11px;color:#C9946A;background:#140F09;border:1px solid #2A1E12;padding:3px 10px;border-radius:999px">Geopolitics</span></div>
+            <div style="font-size:16px;line-height:1.32;font-weight:600;color:#EDEDEC;letter-spacing:-.01em">Port strike escalates, key shipping routes disrupted</div>
+          </div>
+          <div style="padding:15px 18px;border:1px solid #17171A;border-left:3px solid transparent;border-radius:12px;background:#0B0B0E">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6E6E76">7m</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9A9AA0">Citizen report</span><span style="margin-left:auto;font-size:11px;color:#C9946A;background:#140F09;border:1px solid #2A1E12;padding:3px 10px;border-radius:999px">Energy</span></div>
+            <div style="font-size:16px;line-height:1.32;font-weight:600;color:#EDEDEC;letter-spacing:-.01em">On-ground reports: power outage spreading across grid</div>
+          </div>
+          <div style="padding:15px 18px;border:1px solid #17171A;border-left:3px solid transparent;border-radius:12px;background:#0B0B0E">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6E6E76">9m</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9A9AA0">Global wire</span><span style="margin-left:auto;font-size:11px;color:#C9946A;background:#140F09;border:1px solid #2A1E12;padding:3px 10px;border-radius:999px">Markets &amp; Macro</span></div>
+            <div style="font-size:16px;line-height:1.32;font-weight:600;color:#EDEDEC;letter-spacing:-.01em">Bond yields slide as investors reprice risk</div>
+          </div>
+          <div style="padding:15px 18px;border:1px solid #17171A;border-left:3px solid #F5922E;border-radius:12px;background:#0B0B0E">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;color:#0A0A0A;background:#F5922E;padding:3px 8px;border-radius:5px">BREAKING</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6E6E76">12s</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9A9AA0">Fed newsroom</span><span style="margin-left:auto;font-size:11px;color:#C9946A;background:#140F09;border:1px solid #2A1E12;padding:3px 10px;border-radius:999px">Central Banks</span></div>
+            <div style="font-size:16px;line-height:1.32;font-weight:600;color:#EDEDEC;letter-spacing:-.01em">Federal Reserve announces emergency policy review</div>
+          </div>
+          <div style="padding:15px 18px;border:1px solid #17171A;border-left:3px solid #F5922E;border-radius:12px;background:#0B0B0E">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;color:#0A0A0A;background:#F5922E;padding:3px 8px;border-radius:5px">BREAKING</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6E6E76">58s</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9A9AA0">Global wire</span><span style="margin-left:auto;font-size:11px;color:#C9946A;background:#140F09;border:1px solid #2A1E12;padding:3px 10px;border-radius:999px">Technology</span></div>
+            <div style="font-size:16px;line-height:1.32;font-weight:600;color:#EDEDEC;letter-spacing:-.01em">Major chipmaker halts production at flagship fab</div>
+          </div>
+          <div style="padding:15px 18px;border:1px solid #17171A;border-left:3px solid transparent;border-radius:12px;background:#0B0B0E">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6E6E76">6m</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9A9AA0">Company filing</span><span style="margin-left:auto;font-size:11px;color:#C9946A;background:#140F09;border:1px solid #2A1E12;padding:3px 10px;border-radius:999px">Technology</span></div>
+            <div style="font-size:16px;line-height:1.32;font-weight:600;color:#EDEDEC;letter-spacing:-.01em">8-K filed: CEO transition at $40B logistics firm</div>
+          </div>
+          <div style="padding:15px 18px;border:1px solid #17171A;border-left:3px solid transparent;border-radius:12px;background:#0B0B0E">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6E6E76">4m</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9A9AA0">Local desk</span><span style="margin-left:auto;font-size:11px;color:#C9946A;background:#140F09;border:1px solid #2A1E12;padding:3px 10px;border-radius:999px">Geopolitics</span></div>
+            <div style="font-size:16px;line-height:1.32;font-weight:600;color:#EDEDEC;letter-spacing:-.01em">Port strike escalates, key shipping routes disrupted</div>
+          </div>
+          <div style="padding:15px 18px;border:1px solid #17171A;border-left:3px solid transparent;border-radius:12px;background:#0B0B0E">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6E6E76">7m</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9A9AA0">Citizen report</span><span style="margin-left:auto;font-size:11px;color:#C9946A;background:#140F09;border:1px solid #2A1E12;padding:3px 10px;border-radius:999px">Energy</span></div>
+            <div style="font-size:16px;line-height:1.32;font-weight:600;color:#EDEDEC;letter-spacing:-.01em">On-ground reports: power outage spreading across grid</div>
+          </div>
+          <div style="padding:15px 18px;border:1px solid #17171A;border-left:3px solid transparent;border-radius:12px;background:#0B0B0E">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6E6E76">9m</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9A9AA0">Global wire</span><span style="margin-left:auto;font-size:11px;color:#C9946A;background:#140F09;border:1px solid #2A1E12;padding:3px 10px;border-radius:999px">Markets &amp; Macro</span></div>
+            <div style="font-size:16px;line-height:1.32;font-weight:600;color:#EDEDEC;letter-spacing:-.01em">Bond yields slide as investors reprice risk</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- features strip (mono cards) -->
+  <div id="how" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#17171A;border-top:1px solid #17171A;border-bottom:1px solid #17171A">
+    <div style="background:#08080A;padding:32px 28px"><div style="width:42px;height:42px;border-radius:10px;background:#140F09;border:1px solid #33261A;display:flex;align-items:center;justify-content:center;font-size:17px;color:#F5922E">●</div><div style="font-size:16.5px;font-weight:600;margin-top:16px;letter-spacing:-.01em">Real-time alerts</div><div style="font-size:13.5px;line-height:1.45;color:#8A8A90;margin-top:8px">The instant a source publishes, it lands in your feed. No refresh, no delay.</div></div>
+    <div style="background:#08080A;padding:32px 28px"><div style="width:42px;height:42px;border-radius:10px;background:#140F09;border:1px solid #33261A;display:flex;align-items:center;justify-content:center;font-size:17px;color:#F5922E">◇</div><div style="font-size:16.5px;font-weight:600;margin-top:16px;letter-spacing:-.01em">Personalized feed</div><div style="font-size:13.5px;line-height:1.45;color:#8A8A90;margin-top:8px">Choose the companies, topics, industries and events you actually care about.</div></div>
+    <div style="background:#08080A;padding:32px 28px"><div style="width:42px;height:42px;border-radius:10px;background:#140F09;border:1px solid #33261A;display:flex;align-items:center;justify-content:center;font-size:17px;color:#F5922E">▣</div><div style="font-size:16.5px;font-weight:600;margin-top:16px;letter-spacing:-.01em">Trusted sources</div><div style="font-size:13.5px;line-height:1.45;color:#8A8A90;margin-top:8px">Government filings, global &amp; local news agencies, and verified citizen reports.</div></div>
+    <div style="background:#08080A;padding:32px 28px"><div style="width:42px;height:42px;border-radius:10px;background:#140F09;border:1px solid #33261A;display:flex;align-items:center;justify-content:center;font-size:17px;color:#F5922E">▲</div><div style="font-size:16.5px;font-weight:600;margin-top:16px;letter-spacing:-.01em">Faster than the market</div><div style="font-size:13.5px;line-height:1.45;color:#8A8A90;margin-top:8px">Know what's happening before it's priced in and act on it first.</div></div>
+  </div>
+
+  <!-- sources -->
+  <div data-sources="dark" style="padding:44px 40px;text-align:center;border-bottom:1px solid #17171A"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#6E6E76">Monitoring trusted sources — around the clock</div><div style="font-size:22px;font-weight:500;color:#C6C6C8;margin-top:12px;letter-spacing:-.01em;max-width:34ch;margin-left:auto;margin-right:auto;text-wrap:balance">Every signal that moves markets, watched in one place.</div><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px;max-width:820px;margin-left:auto;margin-right:auto"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;color:#C6C6C8;background:#0D0D10;border:1px solid #26261C;padding:11px 22px;border-radius:999px;display:inline-flex;align-items:center;gap:9px"><span style="color:#F5922E">●</span>Government filings</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;color:#C6C6C8;background:#0D0D10;border:1px solid #26261C;padding:11px 22px;border-radius:999px;display:inline-flex;align-items:center;gap:9px"><span style="color:#F5922E">●</span>Global &amp; local news agencies</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;color:#C6C6C8;background:#0D0D10;border:1px solid #26261C;padding:11px 22px;border-radius:999px;display:inline-flex;align-items:center;gap:9px"><span style="color:#F5922E">●</span>Citizen journalism</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;color:#C6C6C8;background:#0D0D10;border:1px solid #26261C;padding:11px 22px;border-radius:999px;display:inline-flex;align-items:center;gap:9px"><span style="color:#F5922E">●</span>Company announcements</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;color:#C6C6C8;background:#0D0D10;border:1px solid #26261C;padding:11px 22px;border-radius:999px;display:inline-flex;align-items:center;gap:9px"><span style="color:#F5922E">●</span>Politicians' posts</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;color:#C6C6C8;background:#0D0D10;border:1px solid #26261C;padding:11px 22px;border-radius:999px;display:inline-flex;align-items:center;gap:9px"><span style="color:#F5922E">●</span>Central bank statements</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;color:#C6C6C8;background:#0D0D10;border:1px solid #26261C;padding:11px 22px;border-radius:999px;display:inline-flex;align-items:center;gap:9px"><span style="color:#F5922E">●</span>Regulatory rulings</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;color:#C6C6C8;background:#0D0D10;border:1px solid #26261C;padding:11px 22px;border-radius:999px;display:inline-flex;align-items:center;gap:9px"><span style="color:#F5922E">●</span>Earnings &amp; economic data</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;color:#C6C6C8;background:#0D0D10;border:1px solid #26261C;padding:11px 22px;border-radius:999px;display:inline-flex;align-items:center;gap:9px"><span style="color:#F5922E">●</span>Social sentiment</span></div></div>
+
+  <!-- cta band -->
+  <div style="padding:80px 40px;text-align:center;background:radial-gradient(120% 140% at 50% -20%,#1A1109 0%,#08080A 62%)">
+    <h2 style="font-size:40px;line-height:1.08;letter-spacing:-.025em;font-weight:700;margin:0 auto;max-width:20ch">Know what moves the world before it moves the market.</h2>
+    <a href="https://mvp.upcome.ai" style="display:inline-block;margin-top:30px;background:#F5922E;color:#0A0A0A;padding:16px 30px;border-radius:9px;font-weight:600;font-size:17px">Try the terminal for free →</a>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#6E6E76;margin-top:16px">Free while in beta · no card required</div>
+  </div>
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:26px 44px;border-top:1px solid #17171A"><div style="display:flex;align-items:center;gap:8px"><img src="assets/upcome-mark.svg" alt="Upcome" style="height:22px;width:22px;display:block"><span style="font-weight:600;font-size:16px;color:#C6C6C8;letter-spacing:-.01em">Upcome</span></div><div style="display:flex;gap:26px;font-size:13.5px;color:#8A8A90"><span>MVP</span><span>Sources</span><span>Privacy</span><span>Contact</span></div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5C5C63">© 2026 Upcome</div></div>
+</div>
+</x-dc>
+</body>
+</html>

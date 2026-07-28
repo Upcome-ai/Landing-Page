@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), monospace;
+}
+
+body {
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes upblink {
+  0%,
+  55% {
+    opacity: 1;
+  }
+  56%,
+  100% {
+    opacity: 0.22;
+  }
+}
+
+@keyframes upmarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes upfeed {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-blink {
+  animation: upblink 1.3s infinite;
+}
+
+.animate-marquee {
+  animation: upmarquee 26s linear infinite;
+}
+
+.animate-feed {
+  animation: upfeed 30s linear infinite;
+}
