@@ -15,7 +15,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Upcome — Know what moves the world before it moves the market",
+  title: "Upcome | Know what moves the world before it moves the market",
   description:
     "Upcome is a free real-time news and events terminal for traders. Personalized topics, trusted sources, and alerts the moment news breaks.",
 };
