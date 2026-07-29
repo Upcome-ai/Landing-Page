@@ -149,7 +149,7 @@ export default function Home() {
         </div>
         <div className="flex items-center gap-8 text-[14.5px] text-[#9A9AA0]">
           <a
-            href="https://mvp.upcome.ai"
+            href="https://terminal.upcome.ai"
             className="rounded-lg bg-[#F5922E] px-[18px] py-[11px] font-semibold text-[#0A0A0A] hover:text-[#0A0A0A]"
           >
             Try the terminal
@@ -172,7 +172,7 @@ export default function Home() {
           </p>
           <div className="mt-[34px] flex gap-[14px]">
             <a
-              href="https://mvp.upcome.ai"
+              href="https://terminal.upcome.ai"
               className="rounded-[9px] bg-[#F5922E] px-[26px] py-[15px] text-[16px] font-semibold text-[#0A0A0A] hover:text-[#0A0A0A]"
             >
               Try the terminal →
@@ -270,7 +270,7 @@ export default function Home() {
           Know what moves the world before it moves the market.
         </h2>
         <a
-          href="https://mvp.upcome.ai"
+          href="https://terminal.upcome.ai"
           className="mt-[30px] inline-block rounded-[9px] bg-[#F5922E] px-[30px] py-[16px] text-[17px] font-semibold text-[#0A0A0A] hover:text-[#0A0A0A]"
         >
           Try the terminal for free →
