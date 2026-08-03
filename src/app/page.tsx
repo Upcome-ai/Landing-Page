@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 
 type FeedItem = {
   breaking?: boolean;
@@ -97,6 +98,43 @@ const sourceChips = [
 ];
 
 const footerLinks = ["MVP", "Sources", "Privacy", "Contact"];
+
+type SocialLink = {
+  name: string;
+  href: string;
+  icon: ReactNode;
+};
+
+const socialLinks: SocialLink[] = [
+  {
+    name: "Discord",
+    href: "https://discord.gg/etZEZaYFM9",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+        className="h-[18px] w-[18px]"
+      >
+        <path d="M20.317 4.369a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.211.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.009c.12.099.246.198.373.292a.077.077 0 0 1-.006.127 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.055c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.331c-1.183 0-2.157-1.086-2.157-2.419 0-1.333.955-2.42 2.157-2.42 1.211 0 2.176 1.096 2.157 2.42 0 1.333-.955 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.086-2.157-2.419 0-1.333.955-2.42 2.157-2.42 1.211 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.419-2.157 2.419z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Telegram",
+    href: "https://t.me/+XmQWp44yS2hiYTFk",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+        className="h-[18px] w-[18px]"
+      >
+        <path d="M23.953 4.57a1.62 1.62 0 0 0-1.667-.278L1.71 12.42c-.828.334-.822 1.51.01 1.834l5.243 2.055 2.03 6.526c.198.635.983.865 1.49.436l2.923-2.478 5.14 3.79c.557.412 1.354.126 1.53-.55l3.86-14.845a1.62 1.62 0 0 0-.983-1.618l.001-.001zM9.53 15.29l-.32 4.51-1.42-4.56 9.36-5.79c.14-.087.29.104.17.213l-7.77 7.017z" />
+      </svg>
+    ),
+  },
+];
 
 function LiveDot() {
   return (
@@ -278,6 +316,20 @@ export default function Home() {
         <div className="mt-4 font-mono text-[12.5px] text-[#6E6E76]">
           Free while in beta · no card required
         </div>
+        <div className="mt-8 flex items-center justify-center gap-4">
+          {socialLinks.map((social) => (
+            <a
+              key={social.name}
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-[#26261C] bg-[#0D0D10] px-[18px] py-[9px] text-[13px] font-medium text-[#C6C6C8] transition-colors hover:border-[#F5922E] hover:text-[#F5922E]"
+            >
+              {social.icon}
+              {social.name}
+            </a>
+          ))}
+        </div>
       </div>
 
       {/* footer */}
@@ -299,7 +351,23 @@ export default function Home() {
             <span key={link}>{link}</span>
           ))}
         </div>
-        <div className="font-mono text-[12px] text-[#5C5C63]">© 2026 Upcome</div>
+        <div className="flex items-center gap-5">
+          <div className="flex items-center gap-3">
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={social.name}
+                className="text-[#8A8A90] transition-colors hover:text-[#F5922E]"
+              >
+                {social.icon}
+              </a>
+            ))}
+          </div>
+          <div className="font-mono text-[12px] text-[#5C5C63]">© 2026 Upcome</div>
+        </div>
       </div>
     </div>
   );
