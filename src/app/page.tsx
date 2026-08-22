@@ -178,12 +178,12 @@ export default function Home() {
         <div className="flex items-center gap-[9px]">
           <Image
             src="/upcome-mark.svg"
-            alt="Upcome"
+            alt="Wealth Frame"
             width={26}
             height={26}
             className="block h-[26px] w-[26px]"
           />
-          <span className="text-[20px] font-semibold tracking-[-0.02em]">Upcome</span>
+          <span className="text-[20px] font-semibold tracking-[-0.02em]">Wealth Frame</span>
         </div>
         <div className="flex items-center gap-8 text-[14.5px] text-[#9A9AA0]">
           <a
@@ -205,7 +205,7 @@ export default function Home() {
             The moment it happens. Not a moment later.
           </h1>
           <p className="mt-[22px] max-w-[30ch] text-[19px] leading-[1.5] text-[#A6A6AC]">
-            Upcome watches trusted sources in real time and pushes the updates
+            Wealth Frame watches trusted sources in real time and pushes the updates
             that matter to you the instant they publish.
           </p>
           <div className="mt-[34px] flex gap-[14px]">
@@ -337,13 +337,13 @@ export default function Home() {
         <div className="flex items-center gap-2">
           <Image
             src="/upcome-mark.svg"
-            alt="Upcome"
+            alt="Wealth Frame"
             width={22}
             height={22}
             className="block h-[22px] w-[22px]"
           />
           <span className="text-[16px] font-semibold tracking-[-0.01em] text-[#C6C6C8]">
-            Upcome
+            Wealth Frame
           </span>
         </div>
         <div className="flex flex-wrap justify-center gap-[26px] text-[13.5px] text-[#8A8A90]">
@@ -366,7 +366,7 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <div className="font-mono text-[12px] text-[#5C5C63]">© 2026 Upcome</div>
+          <div className="font-mono text-[12px] text-[#5C5C63]">© 2026 Wealth Frame</div>
         </div>
       </div>
     </div>
