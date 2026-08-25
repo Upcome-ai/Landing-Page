@@ -15,9 +15,9 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wealth Frame | Know what moves the world before it moves the market",
+  title: "Upcome | Know what moves the world before it moves the market",
   description:
-    "Wealth Frame is a free real-time news and events terminal for traders. Personalized topics, trusted sources, and alerts the moment news breaks.",
+    "Upcome is a free real-time news and events terminal for traders. Personalized topics, trusted sources, and alerts the moment news breaks.",
 };
 
 export default function RootLayout({
